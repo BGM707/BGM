@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Gonzalez Medina | FullStack Developer</title>
+    <!-- CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/IMG_2447.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">Loading...</div>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#home">BGM DEV</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cv">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cotizador">Cotizador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificates">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light theme-toggle">
+                    <i class="bi bi-sun-fill"></i> <!-- Icono de sol para el tema claro -->
+                    <i class="bi bi-moon-fill" style="display: none;"></i> <!-- Icono de luna para el tema oscuro -->
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <iframe class="hero-video" src="https://www.youtube.com/embed/LOdTW8JI2Xg?autoplay=1&loop=1&playlist=LOdTW8JI2Xg&mute=1"
+            title="programando" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="container hero-content">
+            <h1 class="hero-title">Benjamin <span class="text-danger">Gonzalez</span> Medina</h1>
+            <p class="hero-subtitle">FullStack Developer passionate about creating amazing digital experiences</p>
+            <div class="social-icons mb-4">
+                <a href="https://twitter.com/crisoull" target="_blank" class="text-white">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/benjamin-gonzalez-6986462a3/" target="_blank" class="text-white">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/BGM707" target="_blank" class="text-white">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <button class="btn btn-custom" onclick="location.href='#contact'">Let's work together</button>
+        </div>
+    </section>
+
+    <section id="work" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Portfolio</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <iframe width="100%" height="305" src="https://www.youtube.com/embed/zZSWzWSd4_c?autoplay=1&loop=1&playlist=zZSWzWSd4_c&mute=1"
+                            title="App Flet Python deteccion de rostros con modelo pre entrenado de haarcascades"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Facial Detection System</h5>
+                            <p class="card-text">Advanced facial detection using Python, OpenCV, and Flet with real-time processing capabilities.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-secondary">OpenCV</span>
+                                <span class="badge bg-info">Flet</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <iframe width="100%" height="305" src="https://www.youtube.com/embed/cX-uI8LD1XI?autoplay=1&loop=1&playlist=cX-uI8LD1XI&mute=1" title="Pagina web Ofelia Restobar con carrito y compra directa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> </iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">WebSite Restobar Management System</h5>
+                            <p class="card-text">Complete restaurant management solution built with Django, featuring robust admin panel and database integration.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-success">Django</span>
+                                <span class="badge bg-warning text-dark">JavaScript</span>
+                                <span class="badge bg-danger">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100">
+                        <iframe width="100%" height="305" src="https://www.youtube.com/embed/fj4xgA2UyGQ?autoplay=1&loop=1&playlist=fj4xgA2UyGQ&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Inventory Management System</h5>
+                            <p class="card-text">Cross-platform inventory management application with Excel export functionality.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-success">Flet</span>
+                                <span class="badge bg-info">Excel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100">
+                        <iframe width="100%" height="305" src="https://www.youtube.com/embed/ldUdpWjYBEQ&t=7s?autoplay=1&loop=1&playlist=ldUdpWjYBEQ&t=7s&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Customizable Grade Calculator: Adjust Percentages for Evaluations and Final Exam</h5>
+                            <p class="card-text">Grade calculator with the possibility of adjusting the percentages of each evaluation and the final exam.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-success">FLET</span>
+                                <span class="badge bg-info">IOS</span>
+                                <span class="badge bg-black">Android</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <iframe width="100%" height="305" src="https://www.youtube.com/embed/Xl-a7VL_PF0?autoplay=1&loop=1&playlist=Xl-a7VL_PF0&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Minimalist Bar Website with Cart: Premium Experience and Seamless Pickup Solution</h5>
+                            <p class="card-text">Effortless Customer Experience: Order, Pay, and Pick Up with Ease.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-warning text-dark">CSS</span>
+                                <span class="badge bg-danger">JS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/uArISrts5OM?autoplay=1&loop=1&playlist=uArISrts5OM&mute=1"
+                                title="Vicuña Coffe"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                        </iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Vicuña's Café Webpage</h5>
+                            <p class="card-text">Custom web for a client featuring a menu and reservation form.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-warning text-dark">JavaScript</span>
+                                <span class="badge bg-danger">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/rU7V7FCM8IM?autoplay=1&loop=1&playlist=rU7V7FCM8IM&mute=1"
+                                title="macbook no reconoce ssd y se instala nuevo sistema operativo con open core macos ventura"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                        </iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Maintenance, hardware and software update of computers and phones</h5>
+                            <p class="card-text">Macbook's, Windows, Linux, iPhone's, Android.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary">IOS</span>
+                                <span class="badge bg-warning text-dark">ANDROID</span>
+                                <span class="badge bg-danger">MacOS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/0WxXHB0nB8w?autoplay=1&loop=1&playlist=0WxXHB0nB8w&mute=1"
+                                title="Calculador de Salario TKINTER PYTHON"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                        </iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Pleasant, easy-to-use interface to calculate salaries according to schedules, overtime with the possibility of exporting spreadsheets to Excel.</h5>
+                            <p class="card-text">Macbook's, Windows, Linux.</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary">MACOS</span>
+                                <span class="badge bg-warning text-dark">TKINTER</span>
+                                <span class="badge bg-danger">WINDOWS</span>
+                                <span class="badge bg-black">LINUX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="img/IMG_2447.webp" alt="Profile" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h3 class="mb-4">Who am I?</h3>
+                    <p class="lead">I'm a FullStack developer with expertise in Python, JavaScript, and modern web technologies. My passion lies in creating responsive and interactive applications that solve real-world problems.</p>
+                    <div class="mt-4">
+                        <h4 class="mb-3">Skills</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-warning">JavaScript</span>
+                            <span class="badge bg-success">Django</span>
+                            <span class="badge bg-info">React</span>
+                            <span class="badge bg-warning text-dark">HTML/CSS</span>
+                            <span class="badge bg-danger">SQL</span>
+                            <span class="badge bg-primary">Flet</span>
+                            <span class="badge bg-black">Android</span>
+                            <span class="badge bg-secondary">IOS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Python</h5>
+                            <p class="card-text">Expertise in Python programming for web development, data analysis, and automation.</p>
+                            <span class="badge bg-primary">Value: High</span>
+                            <span class="badge bg-secondary">Time: Variable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript</h5>
+                            <p class="card-text">Proficient in JavaScript for front-end and back-end development.</p>
+                            <span class="badge bg-primary">Value: High</span>
+                            <span class="badge bg-secondary">Time: Variable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Django</h5>
+                            <p class="card-text">Experienced in Django for building robust web applications.</p>
+                            <span class="badge bg-primary">Value: High</span>
+                            <span class="badge bg-secondary">Time: Variable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">React</h5>
+                            <p class="card-text">Skilled in React for creating dynamic and interactive user interfaces.</p>
+                            <span class="badge bg-primary">Value: High</span>
+                            <span class="badge bg-secondary">Time: Variable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML/CSS</h5>
+                            <p class="card-text">Proficient in HTML and CSS for creating responsive and visually appealing web designs.</p>
+                            <span class="badge bg-primary">Value: High</span>
+                            <span class="badge bg-secondary">Time: Variable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">SQL</h5>
+                            <p class="card-text">Experienced in SQL for database management and query optimization.</p>
+                            <span class="badge bg-primary">Value: High</span>
+                            <span class="badge bg-secondary">Time: Variable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="700">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Flet</h5>
+                            <p class="card-text">Skilled in Flet for building cross-platform applications.</p>
+                            <span class="badge bg-primary">Value: High</span>
+                            <span class="badge bg-secondary">Time: Variable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Android</h5>
+                            <p class="card-text">Experienced in Android development for mobile applications.</p>
+                            <span class="badge bg-primary">Value: High</span>
+                            <span class="badge bg-secondary">Time: Variable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="900">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">IOS</h5>
+                            <p class="card-text">Skilled in IOS development for mobile applications.</p>
+                            <span class="badge bg-primary">Value: High</span>
+                            <span class="badge bg-secondary">Time: Variable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cv" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">CV</h2>
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-up">
+                    <h3>Benjamin Gonzalez Medina</h3>
+                    <p><strong>FullStack Developer</strong></p>
+                    <p>Graduado como Analista Programador en INACAP en 2024, con certificación FullStack en frontend y backend. He ejecutado diversos proyectos utilizando metodologías Scrum, asegurando una entrega eficiente y de alta calidad.</p>
+                    <p>Experiencia en desarrollo de aplicaciones web responsivas e interactivas utilizando tecnologías modernas. Habilidades en Python, JavaScript, Django, React, y más. Comprometido a entregar soluciones de alta calidad y abierto a colaborar con otros desarrolladores.</p>
+                    <p>El tiempo estimado para la finalización de proyectos varía según la complejidad. Estoy dedicado a documentar cada paso y proporcionar actualizaciones regulares para garantizar la transparencia y la satisfacción del cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cotizador" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Calcula tu Proyecto Web</h2>
+            <p class="text-center mb-4">Selecciona las opciones que necesitas y obtén una cotización inicial al instante.</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="option-card card" data-cost="2000" data-time="7">
+                        <div class="card-body">
+                            <h5 class="card-title">Landing Page</h5>
+                            <p class="card-text">Página simple y efectiva para captar clientes.</p>
+                            <span class="badge bg-primary">Costo: $2000</span>
+                            <span class="badge bg-secondary">Tiempo: 7 días</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="option-card card" data-cost="4000" data-time="14">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Commerce</h5>
+                            <p class="card-text">Tienda en línea con carrito de compras y pagos integrados.</p>
+                            <span class="badge bg-primary">Costo: $4000</span>
+                            <span class="badge bg-secondary">Tiempo: 14 días</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="option-card card" data-cost="6000" data-time="21">
+                        <div class="card-body">
+                            <h5 class="card-title">Aplicación Web</h5>
+                            <p class="card-text">Soluciones personalizadas como juegos o herramientas empresariales.</p>
+                            <span class="badge bg-primary">Costo: $6000</span>
+                            <span class="badge bg-secondary">Tiempo: 21 días</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 text-center">
+                <h4>Total:</h4>
+                <p><strong>Costo:</strong> $<span id="total-cost">0</span></p>
+                <p><strong>Tiempo:</strong> <span id="total-time">0</span> días</p>
+                <button class="btn btn-custom mt-3" onclick="showModal()">Solicitar Reunión</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Certificates and Badges</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 text-center">
+                        <i class="bi bi-award-fill text-primary" style="font-size: 4rem;"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Red Hat System Administration I (RH124)</h5>
+                            <p class="card-text">Issued by Red Hat Training and Certification.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 text-center">
+                        <i class="bi bi-shield-check text-success" style="font-size: 4rem;"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Introduction to Cybersecurity</h5>
+                            <p class="card-text">Issued by Cisco Networking Academy. Completed on July 15, 2023.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 text-center">
+                        <i class="bi bi-cpu text-warning" style="font-size: 4rem;"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Computer Hardware Basics</h5>
+                            <p class="card-text">Issued by Cisco Networking Academy. Completed on June 13, 2024.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 text-center">
+                        <i class="bi bi-code-slash text-info" style="font-size: 4rem;"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript Essentials 1</h5>
+                            <p class="card-text">Issued by Cisco Networking Academy. Completed on July 20, 2024.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card h-100 text-center">
+                        <i class="bi bi-globe text-danger" style="font-size: 4rem;"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Introducción al Internet de las Cosas y Transformación Digital</h5>
+                            <p class="card-text">Issued by Cisco Networking Academy. Completed on July 30, 2024.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card h-100 text-center">
+                        <i class="bi bi-book text-dark" style="font-size: 4rem;"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Fundamentos de Python 1</h5>
+                            <p class="card-text">Issued by Cisco Networking Academy. Completed on September 15, 2023.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="700">
+                    <div class="card h-100 text-center">
+                        <i class="bi bi-laptop text-secondary" style="font-size: 4rem;"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Operating Systems Basics</h5>
+                            <p class="card-text">Issued by Cisco Networking Academy. Completed on August 30, 2023.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMTDJBBb_b5BA4vZNOLWuV0tw8f1jWQw98kJrPEpwMtx_5OQ/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Benjamin Gonzalez Medina.<br>
+                FullStack Developer <br> All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Project Quotation</h2>
+            <form id="quotation-form">
+                <div class="mb-3">
+                    <label for="inputs" class="form-label">Number of Inputs</label>
+                    <input type="number" class="form-control" id="inputs" required>
+                </div>
+                <div class="mb-3">
+                    <label for="outputs" class="form-label">Number of Outputs</label>
+                    <input type="number" class="form-control" id="outputs" required>
+                </div>
+                <div class="mb-3">
+                    <label for="layouts" class="form-label">Number of Layouts</label>
+                    <input type="number" class="form-control" id="layouts" required>
+                </div>
+                <div class="mb-3">
+                    <label for="informative" class="form-label">Informative Pages</label>
+                    <input type="number" class="form-control" id="informative" required>
+                </div>
+                <div class="mb-3">
+                    <label for="interactive" class="form-label">Interactive Pages</label>
+                    <input type="number" class="form-control" id="interactive" required>
+                </div>
+                <div class="mb-3">
+                    <label for="api" class="form-label">API Integrations</label>
+                    <input type="number" class="form-control" id="api" required>
+                </div>
+                <div class="mb-3">
+                    <label for="server" class="form-label">Server Services</label>
+                    <input type="number" class="form-control" id="server" required>
+                </div>
+                <div class="mb-3">
+                    <label for="hardware" class="form-label">Hardware Services</label>
+                    <input type="number" class="form-control" id="hardware" required>
+                </div>
+                <div class="mb-3">
+                    <label for="software" class="form-label">Software Services</label>
+                    <input type="number" class="form-control" id="software" required>
+                </div>
+                <div class="mb-3">
+                    <label for="management" class="form-label">Management Systems</label>
+                    <input type="number" class="form-control" id="management" required>
+                </div>
+                <div class="mb-3">
+                    <label for="hr" class="form-label">Human Resources Systems</label>
+                    <input type="number" class="form-control" id="hr" required>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Calculate</button>
+            </form>
+            <div id="quotation-result" class="mt-4">
+                <h3>Quotation Result</h3>
+                <p><strong>Estimated Cost:</strong> $<span id="estimated-cost">0</span></p>
+                <p><strong>Estimated Time:</strong> <span id="estimated-time">0</span> days</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">↑</button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+
+    <a href="https://wa.me/+56941228089" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¿Necesitas un desarrollador? ¡Contáctame!</span>
+    </a>
+</body>
+</html>
