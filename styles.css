@@ -197,7 +197,7 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/hero-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('dcsem.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -231,14 +231,14 @@ section {
 /* Estilos para la gota de sangre */
 .blood-drop {
     position: absolute;
-    width: 20px;
+    width: 10px;
     height: 20px;
     background-color: red;
     border-radius: 50%;
     top: -20px; /* Inicia fuera de la vista */
     left: 50%;
     transform: translateX(-50%);
-    animation: drop 2s infinite;
+    animation: drop 6s infinite;
 }
 
 /* Fragmentos de la gota */
@@ -283,6 +283,15 @@ section {
         transform: scale(2) translate(50px, -50px) rotate(45deg);
         opacity: 0;
     }
+}
+
+
+/* Instagram Carousel Section */
+.instagram-section .carousel img {
+    width: 100%;
+    height: 300px; /* Altura fija para asegurar que todas las imágenes sean cuadradas */
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* Cards para música y videos */
@@ -543,6 +552,18 @@ section {
 
 .social-link.youtube i:hover {
     background-color: #FF0000;
+}
+
+.social-link.deezer i:hover {
+    background-color: #ff0066;
+}
+
+.social-link.genius i:hover {
+    background-color: #ffff64;
+}
+
+.social-link.musixmatch i:hover {
+    background-color: #00ccff;
 }
 
 /* Contact Section */
