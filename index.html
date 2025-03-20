@@ -34,6 +34,7 @@
                         <li><a href="#videos">Videos</a></li>
                         <li><a href="#about">Sobre Mí</a></li>
                         <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#servicios-musicales">Servicios</a></li>
                     </ul>
                 </div>
                 <i class="fas fa-bars open-menu" id="openMenu"></i>
@@ -54,24 +55,11 @@
         </div>
     </section>
 
-    <!-- Spotify Embed Section -->
-    <section id="spotify-profile" class="spotify-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Mi Perfil en Spotify</h2>
-                <p>Sígueme y escucha mis últimos lanzamientos</p>
-            </div>
-            <div class="spotify-embed">
-                <iframe src="https://open.spotify.com/embed/artist/2xP5UcsY04aoIV63SPCLdv" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            </div>
-        </div>
-    </section>
-
     <!-- New Album Section -->
     <section id="new-album" class="new-album-section">
         <div class="container">
             <div class="section-header">
-                <h2>Nuevo Álbum: "Don Crisoull es la Músika"</h2>
+                <h2>"Don Crisoull es la Músika" - Nuevo Álbum</h2>
                 <p>Disponible en todas las plataformas el 17 de abril de 2025</p>
             </div>
             <div class="social-links">
@@ -118,29 +106,38 @@
             </div>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
+    <!-- Spotify Embed Section -->
+    <section id="spotify-profile" class="spotify-section">
         <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="image.png" alt="Crisoull">
-                </div>
-                <div class="about-text">
-                    <h2>Sobre Crisoull</h2>
-                    <p>Benjamin Rene Obed Gonzalez Medina es “ Crisoull ” Los Angeles 🇨🇱 (26 june 1997) Hace música donde encuentre inspiración y se escucha mundial.</p>
-                    <p>Creo que todos pasamos por un momento que nos mantuvo a prueba y nos hizo ser quien somos ahora. Ese momento fue un crisol. Te fundió y pudo darte una nueva forma, evolucionamos en cada momento y por eso todos lo dias aprendo algo nuevo e intento ser mejor de lo que fui ayer.</p>
-                    <p>Agradecido por todo lo que se ha logrado. Todo es parte del proceso. vivo cada momento como si fuera el primero y el ultimo… Busco llevar mi musica a otro nivel.</p>
-                    <div class="genius-profile">
-                        <h3>Mis Letras en Genius</h3>
-                        <a href="https://genius.com/artists/Crisoull" target="_blank" class="genius-link">
-                            <i class="fab fa-genius"></i> Ver letras y significados
-                        </a>
-                    </div>
-                </div>
+            <div class="section-header">
+                <h2>Mi Perfil en Spotify</h2>
+                <p>Sígueme y escucha mis últimos lanzamientos</p>
+            </div>
+            <div class="spotify-embed">
+                <iframe src="https://open.spotify.com/embed/artist/2xP5UcsY04aoIV63SPCLdv" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
     </section>
+    
+    <!-- Videos Section -->
+        <section id="videos" class="videos-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Populares en YouTube</h2>
+                    <p>Disfruta de mis canciones más populares directamente desde YouTube.</p>
+                </div>
+                <div class="embed-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/videoseries?list=OLAK5uy_mBRoB2N7ghif-MUDXEb0ijSdbEWrtDfPQ" 
+                        width="100%" 
+                        height="315" 
+                        frameborder="0" 
+                        allowfullscreen 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
+                </div>
+            </div>
+        </section>
 
     <!-- Social Links Section -->
     <section class="social-section">
@@ -179,7 +176,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Mis Canciones</h2>
-                <p>Explora mi catálogo musical</p>
+                <p>Explora mi catálogo musical y descubre nuevas melodías</p>
             </div>
             <div class="filter-controls">
                 <button class="filter-btn active" data-filter="all">Todos</button>
@@ -188,7 +185,536 @@
                 <button class="filter-btn" data-filter="collaborations">Colaboraciones</button>
             </div>
             <div class="cards-container" id="musicCards" data-filter="all">
-                <!-- Las tarjetas se generarán con JavaScript -->
+                <!-- Tarjetas de canciones -->
+                <div class="card music-card" data-category="albums">
+                    <div class="card-media">
+                        <img src="AQ.png" alt="Alquimia Silvestre - Album 2023">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Alquimia Silvestre - Album 2023</h3>
+                        <p class="card-date">2023</p>
+                        <p class="card-description">Alquimia Silvestre es el segundo álbum de estudio de CRISOULL, lanzado el 17 de abril de 2023. Contiene 10 canciones originales que exploran la fusión de ritmos latinos y electrónicos.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="albums">
+                    <div class="card-media">
+                        <img src="image.png" alt="Templanza - Album 2022">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Templanza - Album 2022</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Templanza es el primer álbum de estudio de CRISOULL, lanzado el 26 de junio de 2022. Contiene 10 canciones originales que exploran la fusión de ritmos latinos y electrónicos.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="albums">
+                    <div class="card-media">
+                        <img src="ef2fbbe6-54eb-4c40-8ef3-7fcdb33c6d40.png" alt="Don Crisoull Es la musika - Album 2025">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Don Crisoull Es la musika - Album 2025</h3>
+                        <p class="card-date">2025</p>
+                        <p class="card-description">Don Crisoull es la musika representa una evolución en el paradigma de visión del artista.</p>
+                    </div>
+                </div>
+
+                <!-- Nuevas canciones agregadas -->
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="image.png" alt="En Fin, La Hipocresia">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">En Fin, La Hipocresia</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="tonight.png" alt="TONIGHT">
+                        <div class="card-play">
+                            <svg xmlns="https://open.spotify.com/embed/track/35Fog0f8zicOADM5OeLFZB" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">TONIGHT</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="03:33.png" alt="Pa' Probar">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Pa' Probar</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="image.png" alt="Guaracha De Lao">
+                        <div class="card-play">
+                            <svg xmlns="://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Guaracha De Lao</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="image.png" alt="Haciéndolo">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Haciéndolo</h3>
+                        <p class="card-date">2020</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="03:33.png" alt="Ascensor Amarillo">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ascensor Amarillo</h3>
+                        <p class="card-date">2023</p>
+                        <p class="card-description">Canción del álbum Alquimia Silvestre.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="criss.png" alt="Bonita">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bonita</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="Volao.png" alt="VOLAO">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">VOLAO</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="10_sep.png" alt="10 De Septiembre Del 2020">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">10 De Septiembre Del 2020</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="03:33.png" alt="Aroma">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Aroma</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="image.png" alt="Melon Con Vino">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Melon Con Vino</h3>
+                        <p class="card-date">2023</p>
+                        <p class="card-description">Canción del álbum Alquimia Silvestre.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="mitades.png" alt="Mitades">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mitades</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="03:33.png" alt="Acapella">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Acapella</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="diosssa.png" alt="DIOSSSA">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">DIOSSSA</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="image.png" alt="Rompan Fila">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Rompan Fila</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="AQ.png" alt="Chicle">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Chicle</h3>
+                        <p class="card-date">2023</p>
+                        <p class="card-description">Canción del álbum Alquimia Silvestre.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="criss.png" alt="Tiempo">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tiempo</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="AQ.png" alt="Night Clubb">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Night Clubb</h3>
+                        <p class="card-date">2023</p>
+                        <p class="card-description">Canción del álbum Alquimia Silvestre.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="03:33.png" alt="Preparate">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Preparate</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="image.png" alt="Suerte">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Suerte</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="vino_vino .png" alt="vino vino">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">vino vino</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="AQ.png" alt="In The Air">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">In The Air</h3>
+                        <p class="card-date">2023</p>
+                        <p class="card-description">Canción del álbum Alquimia Silvestre.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="03:33.png" alt="La Lluvia">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">La Lluvia</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="image.png" alt="Volverlo A Hacer">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Volverlo A Hacer</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum MARCIANOS (Demo).</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="03:33.png" alt="Lok">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Lok</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="la_pared.png" alt="La pared">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">La pared</h3>
+                        <p class="card-date">2022</p>
+                        <p class="card-description">Canción del álbum Templanza.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="AQ.png" alt="Safari Criminal">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Safari Criminal</h3>
+                        <p class="card-date">2023</p>
+                        <p class="card-description">Canción del álbum Alquimia Silvestre.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="AQ.png" alt="Silvestre">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Silvestre</h3>
+                        <p class="card-date">2023</p>
+                        <p class="card-description">Canción del álbum Alquimia Silvestre.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="AQ.png" alt="Sicosiao En El Mercedes">
+                        <div class="card-play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sicosiao En El Mercedes</h3>
+                        <p class="card-date">2023</p>
+                        <p class="card-description">Canción del álbum Alquimia Silvestre.</p>
+                    </div>
+                </div>
+
+                <div class="card music-card" data-category="singles">
+                    <div class="card-media">
+                        <img src="AQ.png" alt="Black Como Wayne">
+                        <div class="card-play">
+                            <svg xmlns="https://www.youtube.com/watch?v=D94ZTh71E54" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Black Como Wayne</h3>
+                        <p class="card-date">2023</p>
+                        <p class="card-description">Canción del álbum Alquimia Silvestre.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -259,70 +785,127 @@
             </div>
         </div>
     </section>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="image.png" alt="Crisoull">
+                </div>
+                <div class="about-text">
+                    <h2>Sobre Crisoull</h2>
+                    <p>Benjamin Rene Obed Gonzalez Medina es “Crisoull” Los Angeles 🇨🇱 (26 june 1997) Hace música donde encuentre inspiración y se escucha mundial.</p>
+                    <p>Creo que todos pasamos por un momento que nos mantuvo a prueba y nos hizo ser quien somos ahora. Ese momento fue un crisol. Te fundió y pudo darte una nueva forma, evolucionamos en cada momento y por eso todos los días aprendo algo nuevo e intento ser mejor de lo que fui ayer.</p>
+                    <p>Agradecido por todo lo que se ha logrado. Todo es parte del proceso. Vivo cada momento como si fuera el primero y el último… Busco llevar mi música a otro nivel.</p>
+                    <div class="genius-profile">
+                        <h3>Mis Letras en Genius</h3>
+                        <a href="https://genius.com/artists/Crisoull" target="_blank" class="genius-link">
+                            <i class="fab fa-genius"></i> Ver letras y significados
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Videos Section -->
-    <section id="videos" class="videos-section">
+    <!-- Genius Lyrics Section -->
+    <section id="genius-lyrics" class="genius-lyrics-section">
         <div class="container">
             <div class="section-header">
-                <h2>Mis Videos</h2>
-                <p>Videoclips, performances en vivo y más</p>
+                <h2>Letras de Canciones</h2>
+                <p>Explora las letras de mis canciones y descubre el significado detrás de cada verso.</p>
             </div>
-            <div class="filter-controls">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="musicVideos">Videoclips</button>
-                <button class="filter-btn" data-filter="live">En vivo</button>
-                <button class="filter-btn" data-filter="behind">Behind the Scenes</button>
+            <div class="lyrics-carousel-container">
+                <button class="carousel-arrow prev-arrow" id="prev-lyrics">&lt;</button>
+                <div class="lyrics-carousel" id="lyrics-carousel">
+                    <!-- El carrusel se llenará dinámicamente -->
+                </div>
+                <button class="carousel-arrow next-arrow" id="next-lyrics">&gt;</button>
             </div>
-            <div class="cards-container" id="videoCards" data-filter="all">
-                <!-- Las tarjetas se generarán con JavaScript -->
+            <div class="carousel-indicators" id="carousel-indicators">
+                <!-- Indicadores de posición -->
+            </div>
+            <div class="cta-container">
+                <p class="cta-text">¿Quieres ver más letras?</p>
+                <button class="cta-button" id="load-more-lyrics">Cargar más letras</button>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+
+    <!-- Servicios Musicales Section -->
+    <section id="servicios-musicales" class="servicios-section">
         <div class="container">
             <div class="section-header">
-                <h2>Contacto</h2>
-                <p>¿Colaboraciones? ¿Eventos? Escríbeme</p>
+                <h2 class="section-title">Servicios Musicales</h2>
+                <p class="section-subtitle">Lleva tu música al siguiente nivel con los servicios profesionales de CRISOULL</p>
             </div>
-            <div class="contact-container">
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name" required>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="prod_music.jpg" alt="Producción Musical" />
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                    <h3>Producción Musical</h3>
+                    <p>Transforma tus ideas en producciones profesionales. Desde la composición hasta el arreglo final, con atención meticulosa a cada detalle.</p>
+                    <ul class="service-features">
+                        <li>Arreglos musicales personalizados</li>
+                        <li>Selección de instrumentación</li>
+                        <li>Grabación profesional</li>
+                    </ul>
+                    <div class="price-tag">Desde $119 USD</div>
+                    <a href="https://wa.me/941228089?text=Hola%20CRISOULL,%20me%20interesa%20saber%20más%20sobre%20Producción%20Musical." target="_blank" class="btn-service">Solicitar Presupuesto</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="master.jpg" alt="Masterización" />
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Asunto</label>
-                        <input type="text" id="subject" name="subject" required>
+                    <h3>Masterización</h3>
+                    <p>Dale el toque final a tus pistas con masterización de alta calidad. Consigue un sonido profesional que compita en la industria actual.</p>
+                    <ul class="service-features">
+                        <li>Optimización de niveles</li>
+                        <li>Tratamiento estéreo avanzado</li>
+                        <li>Preparación para distribución digital</li>
+                    </ul>
+                    <div class="price-tag">Desde $122 USD</div>
+                    <a href="https://wa.me/941228089?text=Hola%20CRISOULL,%20me%20interesa%20saber%20más%20sobre%20Masterización." target="_blank" class="btn-service">Solicitar Presupuesto</a>
+                </div>
+                <div class="service-card highlighted">
+                    <div class="service-badge">Popular</div>
+                    <div class="service-icon">
+                        <img src="mixer.jpg" alt="Featuring" />
                     </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                    <h3>Featuring con CRISOULL</h3>
+                    <p>Colabora con CRISOULL en tu próximo tema. Añade su estilo único y voz distintiva para elevar tu proyecto musical al siguiente nivel.</p>
+                    <ul class="service-features">
+                        <li>Composición personalizada de versos</li>
+                        <li>Grabación profesional</li>
+                        <li>Entrega en formato de alta calidad</li>
+                    </ul>
+                    <div class="price-tag">Desde $133 USD</div>
+                    <a href="https://wa.me/941228089?text=Hola%20CRISOULL,%20me%20interesa%20saber%20más%20sobre%20Featuring%20con%20CRISOULL." target="_blank" class="btn-service">Solicitar Presupuesto</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="bgbgb.jpg" alt="Mezcla" />
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                </form>
+                    <h3>Mezcla Profesional</h3>
+                    <p>Consigue un balance perfecto entre los elementos de tu canción. Claridad, profundidad y dimensión para que cada elemento brille en su lugar.</p>
+                    <ul class="service-features">
+                        <li>Ecualización precisa</li>
+                        <li>Automatización dinámica</li>
+                        <li>Procesamiento espacial</li>
+                    </ul>
+                    <div class="price-tag">Desde $112 USD</div>
+                    <a href="https://wa.me/941228089?text=Hola%20CRISOULL,%20me%20interesa%20saber%20más%20sobre%20Mezcla%20Profesional." target="_blank" class="btn-service">Solicitar Presupuesto</a>
+                </div>
+            </div>
+            <div class="cta-container">
+                <p class="cta-text">¿Tienes un proyecto especial en mente?</p>
+                <a href="https://wa.me/941228089?text=Hola%20CRISOULL,%20me%20interesa%20saber%20más%20sobre%20tus%20servicios%20musicales." target="_blank" class="cta-button">Hablemos de tu proyecto</a>
             </div>
         </div>
     </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Suscríbete a mi Newsletter</h2>
-                <p>Recibe notificaciones sobre nuevos lanzamientos, eventos y contenido exclusivo</p>
-                <form id="newsletterForm" class="newsletter-form">
-                    <input type="email" placeholder="Tu email" required>
-                    <button type="submit" class="btn btn-primary">Suscribirse</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer class="footer">
@@ -368,11 +951,29 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/941228089?text=Hola%20CRISOULL,%20me%20interesa%20saber%20más%20sobre%20tus%20servicios%20musicales." target="_blank" rel="noopener noreferrer">
+            <div class="whatsapp-button">
+                <div class="whatsapp-icon">
+                    <svg xmlns="master.jpg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.761-1.48-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </div>
+                <div class="whatsapp-text">
+                    <span class="whatsapp-title">¿Listo para crear música?</span>
+                    <span class="whatsapp-subtitle">Contáctame ahora</span>
+                </div>
+            </div>
+        </a>
+        <div class="whatsapp-pulse"></div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.4.8/sweetalert2.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <script src="js/data.js"></script>
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

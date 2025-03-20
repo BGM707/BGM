@@ -304,6 +304,49 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inicializar los filtros
     initFilters();
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const lyricsContainer = document.querySelector('.lyrics-container');
+        const lyricsCardTemplate = document.getElementById('lyrics-card-template');
+        const loadMoreButton = document.getElementById('load-more-lyrics');
+    
+        // Ejemplo de datos de letras de canciones (en un escenario real, esto se obtendría de una API)
+        const lyricsData = [
+            {
+                title: "En Fin, La Hipocresia",
+                content: "Aquí va un fragmento de la letra de la canción...",
+                link: "https://genius.com/Crisoull-en-fin-la-hipocresia-lyrics"
+            },
+            {
+                title: "TONIGHT",
+                content: "Otro fragmento de la letra de la canción...",
+                link: "https://genius.com/Crisoull-tonight-lyrics"
+            }
+            // Agrega más objetos de canciones según sea necesario
+        ];
+    
+        let currentLyricsIndex = 0;
+    
+        function loadLyrics() {
+            if (currentLyricsIndex >= lyricsData.length) {
+                loadMoreButton.style.display = 'none';
+                return;
+            }
+    
+            const lyricsCard = lyricsCardTemplate.cloneNode(true);
+            lyricsCard.style.display = 'block';
+            lyricsCard.querySelector('.lyrics-title').textContent = lyricsData[currentLyricsIndex].title;
+            lyricsCard.querySelector('.lyrics-content').textContent = lyricsData[currentLyricsIndex].content;
+            lyricsCard.querySelector('.lyrics-link').href = lyricsData[currentLyricsIndex].link;
+    
+            lyricsContainer.appendChild(lyricsCard);
+            currentLyricsIndex++;
+        }
+    
+        loadMoreButton.addEventListener('click', loadLyrics);
+    
+        // Cargar las primeras letras al cargar la página
+        loadLyrics();
+    });
     // -------------------- Funcionalidad de reproductor y modal --------------------
     function openSpotifyPlayer(spotifyUrl) {
         // Crear modal para el reproductor de Spotify
@@ -312,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.innerHTML = `
             <div class="modal-content">
                 <span class="close-modal">&times;</span>
-                <iframe src="${spotifyUrl.replace('https://open.spotify.com/', 'https://open.spotify.com/embed/')}" 
+                <iframe src="${spotifyUrl.replace('https://open.spotify.com/crisoull', 'https://open.spotify.com/embed/')}" 
                         width="100%" height="380" frameborder="0" allowtransparency="true" 
                         allow="encrypted-media"></iframe>
             </div>
@@ -365,4 +408,152 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const lyricsData = [
+        {
+            title: "Suerte",
+            excerpt: "¡Ay, qué suerte tenemos de poder volver a vernos!",
+            geniusUrl: "https://genius.com/Crisoull-suerte-lyrics"
+        },
+        {
+            title: "Vino Vino",
+            excerpt: "Y el que no vino a tomar vino ¿A que vino? (Jajaja) Es el crisoull pa No venimos de la tierra",
+            geniusUrl: "https://genius.com/Crisoull-vino-vino-lyrics"
+        },
+        {
+            title: "Tonight (feat. Franco Gi & Amy)",
+            excerpt: "Te acercaste habían luces verdes y rojas por toda la discoteca Una pasti' en la boca, esa loca provoca Que todos la miren como ella baila Tu manera de bailar me encanta",
+            geniusUrl: "https://genius.com/Crisoull-tonight-lyrics"
+        },
+        {
+            title: "10 de septiembre 2020",
+            excerpt: "El hermano de mi madre quiere eliminarme La envidia le arde, el momento un instante Se fue de mi casa a su casa a buscar Un arma automática y volvió gritando tе voy a matar",
+            geniusUrl: "https://genius.com/Crisoull-10-de-septiembre-del-2020-lyrics"
+        }
+    ];
+
+    // Elementos del DOM
+    const carousel = document.getElementById('lyrics-carousel');
+    const prevButton = document.getElementById('prev-lyrics');
+    const nextButton = document.getElementById('next-lyrics');
+    const indicatorsContainer = document.getElementById('carousel-indicators');
+    const loadMoreButton = document.getElementById('load-more-lyrics');
+    
+    let currentIndex = 0;
+    let autoplayInterval;
+
+    // Función para crear las tarjetas de letras
+    function createLyricsCards() {
+        carousel.innerHTML = '';
+        indicatorsContainer.innerHTML = '';
+        
+        lyricsData.forEach((lyrics, index) => {
+            // Crear la tarjeta
+            const card = document.createElement('div');
+            card.className = 'lyrics-card';
+            card.innerHTML = `
+                <h3 class="lyrics-title">${lyrics.title}</h3>
+                <p class="lyrics-content">${lyrics.excerpt}</p>
+                <a href="${lyrics.geniusUrl}" target="_blank" class="lyrics-link">Ver más en Genius</a>
+            `;
+            carousel.appendChild(card);
+            
+            // Crear el indicador
+            const indicator = document.createElement('div');
+            indicator.className = 'indicator';
+            if (index === 0) {
+                indicator.classList.add('active');
+            }
+            indicator.addEventListener('click', () => {
+                goToSlide(index);
+            });
+            indicatorsContainer.appendChild(indicator);
+        });
+        
+        updateCarousel();
+    }
+    
+    // Función para actualizar el carrusel
+    function updateCarousel() {
+        const cards = carousel.querySelectorAll('.lyrics-card');
+        const indicators = indicatorsContainer.querySelectorAll('.indicator');
+        
+        // Actualizar posición del carrusel
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Actualizar indicadores
+        indicators.forEach((indicator, index) => {
+            if (index === currentIndex) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+        
+        // Efecto de aparición para la tarjeta actual
+        cards.forEach((card, index) => {
+            if (index === currentIndex) {
+                card.classList.add('active');
+            } else {
+                card.classList.remove('active');
+            }
+        });
+    }
+    
+    // Función para ir a una diapositiva específica
+    function goToSlide(index) {
+        if (index < 0) {
+            currentIndex = lyricsData.length - 1;
+        } else if (index >= lyricsData.length) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+        updateCarousel();
+    }
+    
+    // Event listeners para los botones de navegación
+    prevButton.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+        resetAutoplay();
+    });
+    
+    nextButton.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+        resetAutoplay();
+    });
+    
+    // Autoplay del carrusel
+    function startAutoplay() {
+        autoplayInterval = setInterval(() => {
+            goToSlide(currentIndex + 1);
+        }, 5000); // Cambiar cada 5 segundos
+    }
+    
+    function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+    }
+    
+    // Evento para el botón "Cargar más letras"
+    loadMoreButton.addEventListener('click', () => {
+        // Aquí podrías añadir una lógica para cargar más letras
+        // Por ejemplo, hacer una petición a una API
+        alert('En una implementación real, aquí se cargarían más letras de canciones.');
+    });
+    
+    // Inicializar el carrusel
+    createLyricsCards();
+    startAutoplay();
+    
+    // Detener autoplay cuando el ratón está sobre el carrusel
+    carousel.addEventListener('mouseenter', () => {
+        clearInterval(autoplayInterval);
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+        startAutoplay();
+    });
 });
