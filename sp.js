@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const randomX = Math.random() * window.innerWidth;
             bloodDrop.style.left = `${randomX}px`;
 
-            // Tamaño aleatorio entre 5px y 15px
-            const size = Math.random() * 10 + 05;
+            // Tamaño aleatorio entre 10px y 30px
+            const size = Math.random() * 20 + 10;
             bloodDrop.style.width = `${size}px`;
             bloodDrop.style.height = `${size}px`;
 
-            // Duración de la animación aleatoria entre 1s y 2s
-            const animationDuration = Math.random() * 1 + 1;
+            // Duración de la animación aleatoria entre 1s y 3s
+            const animationDuration = Math.random() * 2 + 1;
             bloodDrop.style.animationDuration = `${animationDuration}s`;
 
             // Añadir la gota al contenedor hero
@@ -65,28 +65,13 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Crear una nueva gota cada 999ms
-        setInterval(createBloodDrop, 999);
+        // Crear una nueva gota cada 500ms
+        setInterval(createBloodDrop, 500);
     }
 
     // Inicializar las gotas de sangre
     initBloodDrops();
 
-    // Responsividad del menú móvil
-    const openMenu = document.getElementById('openMenu');
-    const closeMenu = document.getElementById('closeMenu');
-    const navLinks = document.getElementById('navLinks');
-    
-
-    openMenu.addEventListener('click', () => {
-        navLinks.style.right = '0';
-    }
-    );
-
-    closeMenu.addEventListener('click', () => {
-        navLinks.style.right = '-300px';
-    }
-    );  
     // -------------------- Funcionalidad de la barra de navegación --------------------
     function initNavbar() {
         const navbar = document.querySelector('.header'); // Obtener la barra de navegación
@@ -103,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 navbar.classList.remove('scrolled'); // Quitar clase 'scrolled' al volver al inicio
             }
         });
+
         // Agregar la clase 'active' al enlace de navegación correspondiente
         window.addEventListener('scroll', function () {
             let current = ''; // Variable para almacenar la sección actual
@@ -322,6 +308,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const lyricsContainer = document.querySelector('.lyrics-container');
         const lyricsCardTemplate = document.getElementById('lyrics-card-template');
         const loadMoreButton = document.getElementById('load-more-lyrics');
+    
+        // Ejemplo de datos de letras de canciones (en un escenario real, esto se obtendría de una API)
         const lyricsData = [
             {
                 title: "En Fin, La Hipocresia",
@@ -333,6 +321,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 content: "Otro fragmento de la letra de la canción...",
                 link: "https://genius.com/Crisoull-tonight-lyrics"
             }
+            // Agrega más objetos de canciones según sea necesario
         ];
     
         let currentLyricsIndex = 0;
@@ -366,7 +355,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.innerHTML = `
             <div class="modal-content">
                 <span class="close-modal">&times;</span>
-                <iframe src="${spotifyUrl.replace('https://open.spotify.com/intl-es/artist/2xP5UcsY04aoIV63SPCLdv?si=gLOtOtbkSu-hdlFwb4FlGQ', 'https://open.spotify.com/embed/artist/2xP5UcsY04aoIV63SPCLdv')}" 
+                <iframe src="${spotifyUrl.replace('https://open.spotify.com/crisoull', 'https://open.spotify.com/embed/')}" 
                         width="100%" height="380" frameborder="0" allowtransparency="true" 
                         allow="encrypted-media"></iframe>
             </div>
@@ -420,8 +409,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-//tarjetas de letras de canciones
 
 document.addEventListener('DOMContentLoaded', function() {
     const lyricsData = [
@@ -550,16 +537,13 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoplay();
     }
     
-    // Evento para el botón "Cargar más letras en Genius/perfil  Crisoull"
+    // Evento para el botón "Cargar más letras"
     loadMoreButton.addEventListener('click', () => {
-        // lógica para mostrar más letras de canciones en genius
-
-        alert('cargar más letras de canciones en Genius ?');
-        window
-        .location
-        .      href = "https://genius.com/artists/Crisoull"; // redirigir a la página de Genius
+        // Aquí podrías añadir una lógica para cargar más letras
+        // Por ejemplo, hacer una petición a una API
+        alert('En una implementación real, aquí se cargarían más letras de canciones.');
     });
-
+    
     // Inicializar el carrusel
     createLyricsCards();
     startAutoplay();
@@ -573,49 +557,3 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoplay();
     });
 });
-
-// -------------------- Funcionalidad de la galería de canciones--------------------
-document.addEventListener('DOMContentLoaded', function () {
-    const gallery = document.getElementById('gallery'); // Obtener la galería de canciones
-    const modal = document.getElementById('galleryModal'); // Obtener el modal de la galería
-    const modalImage = document.getElementById('galleryModalImage'); // Obtener la imagen del modal
-    const modalTitle = document.getElementById('galleryModalTitle'); // Obtener el título del modal
-    const modalClose = document.getElementById('galleryModalClose'); // Obtener el botón de cierre del modal
-
-    // Función para abrir el modal con la imagen seleccionada
-    function openModal(imageUrl, title) {
-        modalImage.src = imageUrl; // Establecer la imagen del modal
-        modalTitle.textContent = title; // Establecer el título del modal
-        modal.classList.add('open'); // Abrir el modal
-    }
-
-    // Función para cerrar el modal
-
-    function closeModal() {
-        modal.classList.remove('open'); // Cerrar el modal
-    }   
-
-    // Event listener para cerrar el modal al hacer clic en el botón de cierre
-    modalClose.addEventListener('click', closeModal);   
-
-    // Event listener para cerrar el modal al hacer clic fuera de la imagen
-    modal.addEventListener('click', function (e) {
-        if (e.target === modal) {
-            closeModal();
-        }
-    }
-    );
-
-    // Event listener para abrir el modal al hacer clic en una imagen   
-
-    gallery.addEventListener('click', function (e) {
-        if (e.target.tagName === 'IMG') {
-            const imageUrl = e.target.src; // Obtener la URL de la imagen
-            const title = e.target.alt; // Obtener el título de la imagen
-            openModal(imageUrl, title); // Abrir el modal con la imagen seleccionada
-        }
-    }
-    );
-}
-);
-
